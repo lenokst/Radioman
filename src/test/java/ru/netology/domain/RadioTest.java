@@ -25,20 +25,20 @@ class RadioTest {
     public void prevStation2() {
         radio.setCurrentStation(0);
         radio.prevStation();
-        assertEquals(9, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
     }
 
     @Test
     public void limitValueStation() {
         radio.setCurrentStation(8);
-        radio.nextStation();//
+        radio.nextStation();
         assertEquals(9, radio.getCurrentStation());
     }
 
     @Test
     public void overLimitValueStation() {
-        radio.setCurrentStation(9);
-        radio.nextStation();//
+        radio.setCurrentStation(10);
+        radio.nextStation();
         assertEquals(0, radio.getCurrentStation());
     }
 
@@ -62,23 +62,23 @@ class RadioTest {
 
     @Test
     public void nextVolume() {
-        radio.setCurrentVolume(4);
-        radio.nextVolume();//
-        assertEquals(5, radio.getCurrentVolume());
+        radio.setCurrentVolume(74);
+        radio.nextVolume();
+        assertEquals(75, radio.getCurrentVolume());
     }
 
     @Test
     public void prevVolume() {
-        radio.setCurrentVolume(5);
+        radio.setCurrentVolume(36);
         radio.prevVolume();//
-        assertEquals(4, radio.getCurrentVolume());
+        assertEquals(35, radio.getCurrentVolume());
     }
 
     @Test
     public void overMaxVolume() {
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.nextVolume();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
