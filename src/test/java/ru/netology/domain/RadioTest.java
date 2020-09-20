@@ -31,14 +31,14 @@ class RadioTest {
     @Test
     public void limitValueStation() {
         radio.setCurrentStation(8);
-        radio.nextStation();//
+        radio.nextStation();
         assertEquals(9, radio.getCurrentStation());
     }
 
     @Test
     public void overLimitValueStation() {
         radio.setCurrentStation(10);
-        radio.nextStation();//
+        radio.nextStation();
         assertEquals(0, radio.getCurrentStation());
     }
 
